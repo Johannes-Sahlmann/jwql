@@ -19,13 +19,14 @@ Use
         pytest -s test_interface_edb.py
 """
 
-# import pytest
+import pytest
 
 from astropy.time import Time
 
 from jwql.interface_engineering_database.interface_edb import query_meta_data, query_mnemonic
 
 
+@pytest.mark.xfail # temporary until `internal` Jenkins becomes available
 def test_query_meta_data():
     """Test the query of mnemonic meta data."""
 
@@ -35,6 +36,7 @@ def test_query_meta_data():
     print(data)
 
 
+@pytest.mark.xfail # temporary until `internal` Jenkins becomes available
 def test_query_mnemonic():
     """Test the query of a mnemonic over a given time range."""
 
