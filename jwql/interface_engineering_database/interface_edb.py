@@ -48,6 +48,7 @@ settings = get_config()
 BASE_URL = settings['edb_base_url']
 
 
+
 def execute_query(url_string, parameters=None, verbose=True):
     """Execute the query which consists in reading the URL.
 
